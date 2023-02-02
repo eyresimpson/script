@@ -2,21 +2,18 @@ import os
 import shutil
 
 
-def move_files_by_type(src_folder, dest_folder):
-    if not os.path.exists(dest_folder):
-        os.makedirs(dest_folder)
-
-    for filename in os.listdir(src_folder):
-        src_file = os.path.join(src_folder, filename)
-        if os.path.isfile(src_file):
-            file_type = os.path.splitext(filename)[1][1:]
-            dest_type_folder = os.path.join(dest_folder, file_type)
-            if not os.path.exists(dest_type_folder):
-                os.makedirs(dest_type_folder)
-            dest_file = os.path.join(dest_type_folder, filename)
-            shutil.move(src_file, dest_file)
+def move_files_by_extension(src_folder):
+    for dirpath, dirnames, filenames in os.walk(src_folder):
+        for filename in filenames:
+            file_path = os.path.join(dirpath, filename)
+            ext = os.path.splitext(filename)[1][1:]
+            dest_folder = os.path.join(dst_folder, ext)
+            if not os.path.exists(dest_folder):
+                os.makedirs(dest_folder)
+            shutil.move(file_path, os.path.join(dest_folder, filename))
 
 
-src_folder = 'E:\\航拍数据'
-dest_folder = 'E:\\航拍'
-move_files_by_type(src_folder, dest_folder)
+src_folder = 'E:\\其他'
+dst_folder = 'E:\\航拍'
+
+move_files_by_extension(src_folder)
