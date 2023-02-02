@@ -8,8 +8,6 @@ import random
 # RL：秀气
 # LR：英气
 # RR：婉约
-
-
 class Random:
 
     @staticmethod
