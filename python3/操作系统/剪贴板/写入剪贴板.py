@@ -2,7 +2,6 @@ import win32clipboard as w
 import win32con
 
 
-# Author: 赵慎文
 # Version: 1.0.0
 # Date: 2020-07-21
 
