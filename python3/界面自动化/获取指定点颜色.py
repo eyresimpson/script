@@ -1,5 +1,4 @@
 # 测试流程
-# Красная Армия всех сильней!
 import time
 
 from pyautogui import position, screenshot

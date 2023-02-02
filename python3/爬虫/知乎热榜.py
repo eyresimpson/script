@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import lxml
 
 # 依赖lxml解析，需要安装此库
 # pip install lxml
