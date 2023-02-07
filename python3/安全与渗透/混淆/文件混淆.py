@@ -2,6 +2,8 @@ import os
 import time
 
 
+# 此脚本尚未完成
+
 class OpenCME:
 
     @staticmethod
