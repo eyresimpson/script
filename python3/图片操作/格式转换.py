@@ -10,5 +10,5 @@ def convert_to_jpg(dir_path):
             img.save(os.path.join(dir_path, new_filename), "JPEG")
 
 
-dir_path = "/path/to/directory"
+dir_path = "/Users/eyresimpson/截图"
 convert_to_jpg(dir_path)
